@@ -5,8 +5,6 @@ import java.util.Random;
 public class MyHashTableTest {
     public static void main(String[] args) {
         MyHashTable<MyTestingClass, Student> table = new MyHashTable<>();
-
-
         // Adding random 10000 elements to the hashtable
         Random random = new Random();
         for (int i = 0; i < 10000; i++) {
