@@ -1,21 +1,32 @@
 package org.example;
+public class Subjects {
+    private String subjectId;
 
-
-class MyTestingClass {
-    private int id;
-
-    public MyTestingClass(int id) {
-        this.id = id;
+    public Subjects(String subjectId) {
+        this.subjectId = subjectId;
     }
 
-    public int getId() {
-        return id;
+    public String getSubjectId() {
+        return subjectId;
     }
 
-    // Custom hashCode method
+    public void setSubjectId(String subjectId) {
+        this.subjectId = subjectId;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Subjects subject = (Subjects) obj;
+        return subjectId != null ? subjectId.equals(subject.subjectId) : subject.subjectId == null;
+    }
     @Override
     public int hashCode() {
-        return id * 31;
+        return subjectId != null ? subjectId.length() : 0;
+    }
+    @Override
+    public String toString() {
+        return subjectId;
     }
 }
-
