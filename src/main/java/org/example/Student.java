@@ -1,29 +1,39 @@
 package org.example;
 
 public class Student {
-    private String name;
-    private int age;
-
-    public Student(String name, int age) {
-        this.name = name;
-        this.age = age;
+    private int id;
+    private String firstname;
+    private String surname;
+    public Student(int id, String firstname, String surname){
+        this.id = id;
+        this.firstname = firstname;
+        this.surname = surname;
+    }
+    public int getId(){
+        return id;
     }
 
-
-    public String getName() {
-        return name;
+    public void setId(int id){
+        this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getFirstname(){
+        return firstname;
     }
 
-    public int getAge() {
-        return age;
+    public void setFirstname(String firstname){
+        this.firstname = firstname;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public String getSurname(){
+        return surname;
+    }
+    public void setSurname(String surname){
+        this.surname = surname;
     }
 
+    public String toString(){
+        return id+ " " + firstname + " " + surname;
+    }
 }
+
