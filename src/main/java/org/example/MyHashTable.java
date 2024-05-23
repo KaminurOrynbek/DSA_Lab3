@@ -1,6 +1,7 @@
 package org.example;
 
 public class MyHashTable<K, V> {
+
     private class HashNode<K, V> {
         private K key;
         private V value;
@@ -22,9 +23,6 @@ public class MyHashTable<K, V> {
     private int M; // default capacity M = 11
     private int size; // number of HashNodes
 
-    public int getSizeOfArray(int i){
-        return chainArray.length;
-    }
 
     // default constructor of MyHashTable with no parameter
     public MyHashTable() {
