@@ -40,8 +40,8 @@ public class MyHashTable<K, V> {
     // my implemented hash function that returns chainArray index of our HashNode
     // @param: K (generic type) key
     // @return: int
-    public int hash(K key) {
-        return key.toString().length() % M; // our key's type is generic and that's why we need toString func to access length of key
+    private int hash(K key) {
+        return Math.abs(key.hashCode()) % M;
     }
 
     // insertion new key, value pair with addFirst method
